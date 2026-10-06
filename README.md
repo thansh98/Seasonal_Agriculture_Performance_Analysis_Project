@@ -10,17 +10,7 @@
 ![Partner](https://img.shields.io/badge/Partner-BharatCares%20%7C%20IBM%20SkillsBuild-blueviolet)
 
 ---
-
----
-
-## 🎯 Official Internship Submission Deliverables
-
-| Deliverable Type | Required Filename | Generated File in Repository | Format | Status |
-|---|---|---|:---:|:---:|
-| **Code File** | `YourName_ProjectName.ipynb` | [`YourName_ProjectName.ipynb`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/YourName_ProjectName.ipynb) / [`Ansh_Seasonal_Agriculture_Performance_Analysis.ipynb`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/Ansh_Seasonal_Agriculture_Performance_Analysis.ipynb) | `.ipynb` / `.py` | ✅ Ready (1.7 MB, Full Outputs) |
-| **Requirements File** | `requirements.txt` | [`requirements.txt`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/requirements.txt) | `.txt` | ✅ Ready (All dependencies) |
-| **Project Report** | `YourName_ProjectReport.docx` | [`YourName_ProjectReport.docx`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/YourName_ProjectReport.docx) / [`Ansh_ProjectReport.docx`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/Ansh_ProjectReport.docx) | `.docx` | ✅ Ready (Formal Word Doc) |
-| **README File** | `README.md` | [`README.md`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/README.md) | `.md` | ✅ Ready |
+git add .
 
 ---
 
