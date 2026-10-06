@@ -39,7 +39,7 @@ The Streamlit dashboard provides interactive filters and a yield/profit simulato
 
 Fields cover farm identification, location, climate, soil conditions, nutrients, resource inputs, yield, production, market price, cost, revenue, profit, and disease/pest risk. Monetary values are in INR; yield is in tonnes per hectare; water efficiency is in tonnes per 1,000 m³.
 
-The ZIP includes a [project brief](data/Seasonal%20Agriculture%20Performance%20Analysis.pdf). It does not establish an external dataset source, collection dates, or field validation; findings should be interpreted within the supplied dataset.
+The analysis uses the seasonal agriculture dataset supplied with the project.
 
 ## Technologies
 
