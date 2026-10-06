@@ -1,123 +1,220 @@
 # Seasonal Agriculture Performance Analysis
+
 ### AICTE | IBM SkillsBuild Data Analytics with AI Internship Program 2026
-**Implementation Partner:** BharatCares | **Trainer:** Mr. Kartik Hooda  
-**Duration:** 6 Weeks (17th August – 30th September 2026) | **Topic:** Data Analytics with AI: Foundation to Implementation
 
-![Project Status](https://img.shields.io/badge/Project-Completed-success)
-![Python Version](https://img.shields.io/badge/Python-3.12-blue)
-![Machine Learning](https://img.shields.io/badge/ML-Gradient%20Boosting%20%7C%20Random%20Forest-green)
-![Streamlit App](https://img.shields.io/badge/Web%20App-Streamlit%201.38-red)
-![Partner](https://img.shields.io/badge/Partner-BharatCares%20%7C%20IBM%20SkillsBuild-blueviolet)
+**Implementation Partner:** BharatCares  
+**Trainer:** Mr. Kartik Hooda  
+**Duration:** 17 August – 30 September 2026  
+**Topic:** Data Analytics with AI: Foundation to Implementation
 
----
-git add .
+## Overview
 
----
+A Python data analytics project that compares agricultural performance across Kharif, Rabi, and Zaid seasons. It combines data cleaning, exploratory visualization, statistical testing, and machine learning to examine crop yield, water use, disease/pest risk, and farm profitability.
 
-## 🔗 Dataset Information & Links
-* **Dataset Name:** Multi-State Seasonal Agriculture Performance Dataset
-* **Local Repository Path:** [`data/seasonal_agriculture_performance_dataset.csv`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/data/seasonal_agriculture_performance_dataset.csv)
-* **Processed Dataset Path:** [`data/cleaned_seasonal_agriculture_dataset.csv`](file:///C:/Users/anshp/.gemini/antigravity/scratch/seasonal_agriculture_performance_analysis/data/cleaned_seasonal_agriculture_dataset.csv)
-* **Scope:** 4,000 Farm Observations across 8 States (Andhra Pradesh, Gujarat, Karnataka, Madhya Pradesh, Maharashtra, Punjab, Tamil Nadu, Telangana)
-* **Crops Tracked:** Chilli, Cotton, Groundnut, Maize, Pulses, Rice, Sugarcane, Wheat
-* **Attributes:** 28 Parameters covering Environmental conditions, Soil chemistry, Irrigation methods, Resource inputs, Production yields, and Farm economics.
+The Streamlit dashboard provides interactive filters and a yield/profit simulator using locally saved models. Analysis is based on the CSV files included in this project; the application does not fetch live weather or market data.
 
----
+## Features
 
-## 🛠️ Technologies Used
-* **Programming Language:** Python 3.12
-* **Data Processing & Feature Engineering:** `pandas` (v2.2+), `numpy` (v1.24+)
-* **Inferential Statistics & Hypothesis Testing:** `scipy.stats` (One-Way ANOVA, Kruskal-Wallis H, Mann-Whitney U, Chi-Square)
-* **Machine Learning & Predictive Analytics:** `scikit-learn` (Gradient Boosting Regressor, Random Forest Regressor, Ridge Regression, K-Fold Cross Validation)
-* **Data Visualization:** `matplotlib`, `seaborn`, `plotly.express` (interactive visual analytics)
-* **Statistical Modeling & Trendlines:** `statsmodels` (OLS regression trendlines)
-* **Interactive Decision Web App:** `streamlit` (v1.38+)
-* **Documentation & Automation:** `python-docx` (Word doc generation), `python-pptx` (PowerPoint automation), `jupyter`, `nbformat`, `nbclient`
+- Filter records by season, state, crop, and irrigation method.
+- Compare seasonal climate conditions, crop yields, irrigation efficiency, and farm economics.
+- Explore regional performance through interactive Plotly charts.
+- Estimate yield and profit for user-entered farm conditions.
+- Review answers to 12 agricultural analysis questions.
+- Run statistical tests and compare three regression algorithms.
+- Regenerate analysis tables, figures, models, and the Jupyter notebook.
+- Generate a Word report; generate a presentation when its required template is available.
 
----
+## Dataset
 
-## 📌 Project Overview
+| Item | Included data |
+|---|---|
+| Raw dataset | [seasonal_agriculture_performance_dataset.csv](data/seasonal_agriculture_performance_dataset.csv) |
+| Cleaned dataset | [cleaned_seasonal_agriculture_dataset.csv](data/cleaned_seasonal_agriculture_dataset.csv) |
+| Records | 4,000 in each dataset |
+| Columns | 28 raw; 40 after preprocessing and feature engineering |
+| Seasons | Kharif, Rabi, Zaid |
+| States | Andhra Pradesh, Gujarat, Karnataka, Madhya Pradesh, Maharashtra, Punjab, Tamil Nadu, Telangana |
+| Crops | Chilli, Cotton, Groundnut, Maize, Pulses, Rice, Sugarcane, Wheat |
+| Irrigation methods | Drip, Flood, Rainfed, Sprinkler |
 
+Fields cover farm identification, location, climate, soil conditions, nutrients, resource inputs, yield, production, market price, cost, revenue, profit, and disease/pest risk. Monetary values are in INR; yield is in tonnes per hectare; water efficiency is in tonnes per 1,000 m³.
+
+The ZIP includes a [project brief](data/Seasonal%20Agriculture%20Performance%20Analysis.pdf). It does not establish an external dataset source, collection dates, or field validation; findings should be interpreted within the supplied dataset.
+
+## Technologies
+
+| Purpose | Libraries |
+|---|---|
+| Data processing | pandas, NumPy |
+| Statistical analysis | SciPy |
+| Machine learning | scikit-learn, joblib |
+| Visualization | Matplotlib, Seaborn, Plotly, statsmodels |
+| Web dashboard | Streamlit |
+| Notebook generation and execution | Jupyter, nbformat, nbclient, ipykernel |
+| Document generation | python-docx, python-pptx |
+
+See [requirements.txt](requirements.txt) for the declared dependency versions. Python 3.10 or newer is a practical starting point. Model training uses `root_mean_squared_error`, which requires **scikit-learn 1.4 or newer**, although the existing requirements file declares `>=1.3.0`.
+
+## Project Files
+
+| Path | Purpose |
+|---|---|
+| `app.py` | Streamlit dashboard and prediction simulator |
+| `requirements.txt` | Python dependencies |
+| `data/` | Raw/cleaned CSVs and project brief |
+| `notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb` | Analysis notebook |
+| `src/data_preprocessing.py` | Missing-value handling and derived features |
+| `src/statistical_analysis.py` | Hypothesis tests and correlations |
+| `src/ml_models.py` | Model training, evaluation, and saving |
+| `src/visualization.py` | Analysis figure generation |
+| `src/build_jupyter_notebook.py` | Build and execute the notebook |
+| `src/generate_docx_report.py` | Word report generation |
+| `src/generate_presentation.py` | Template-based presentation generation |
+| `reports/figures/` | 10 saved analysis figures |
+| `reports/models/` | Yield/profit models and their feature-name files |
+| `reports/ml_model_evaluation.csv` | Saved model benchmark results |
+| `reports/statistical_anova_tests.csv` | Seasonal statistical test results |
+| `reports/statistical_pairwise_tests.csv` | Pairwise test results |
+| `reports/statistical_chi2_tests.csv` | Chi-square test results |
+| `reports/environmental_outcome_correlations.csv` | Environmental/outcome correlations |
+| `reports/yield_feature_importances.csv` | Yield model feature importance |
+| `reports/profit_feature_importances.csv` | Profit model feature importance |
+
+## Installation and Run Instructions
+
+Extract the project ZIP and open a terminal inside `seasonal_agriculture_performance_analysis`, where `app.py` and `requirements.txt` are located.
+
+### Windows PowerShell
+
+```powershell
+cd seasonal_agriculture_performance_analysis
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install "scikit-learn>=1.4"
+python -m streamlit run app.py
 ```
-seasonal_agriculture_performance_analysis/
-│
-├── data/                                     
-│   ├── seasonal_agriculture_performance_dataset.csv     
-│   ├── cleaned_seasonal_agriculture_dataset.csv        
-│   ├── Major_Project_Requirements.pdf                   
-│     
-│
-├── notebooks/                               
-│   └── Seasonal_Agriculture_Performance_Analysis.ipynb 
-│
-├── reports/                                
-│   ├── figures/                               
-│   │   ├── seasonal_distributions.png        
-│   │   ├── yield_by_crop_season.png          
-│   │   ├── irrigation_efficiency.png          
-│   │   ├── economic_performance.png           
-│   │   ├── crop_profitability_matrix.png      
-│   │   ├── disease_pest_risk.png             
-│   │   ├── correlation_heatmap.png            
-│   │   ├── state_seasonal_disparity.png       
-│   │   ├── feature_importance.png          
-│   │   └── key_questions_summary.png         
-│   ├── models/                                
-│   │   ├── best_yield_model.pkl               
-│   │   └── best_profit_model.pkl           
-│   ├── statistical_anova_tests.csv           
-│   ├── statistical_pairwise_tests.csv     
-│   └── ml_model_evaluation.csv               
-│
-├── src/                                
-│   ├── data_preprocessing.py               
-│   ├── statistical_analysis.py           
-│   ├── ml_models.py                           
-│   ├── visualization.py                      
-│   ├── generate_presentation.py              
-│   └── build_jupyter_notebook.py            
-│
-├── app.py                                                        
-├── requirements.txt                           
-└── README.md                                  
+
+If PowerShell prevents activation, use the virtual environment directly:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install "scikit-learn>=1.4"
+.\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
----
+### Linux / macOS
 
-## 🔍 Key Findings Summary
+```bash
+cd seasonal_agriculture_performance_analysis
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install "scikit-learn>=1.4"
+python -m streamlit run app.py
+```
 
-| Metric | Kharif (Monsoon) | Rabi (Winter) | Zaid (Summer) | Statistical Test & Significance |
-|---|---|---|---|---|
-| **Rainfall (mm)** | **852.1 mm** | 435.9 mm | 299.3 mm | ANOVA $F = 3,448$, $p < 10^{-300}$ (Significant) |
-| **Average Temperature** | 28.5°C | **23.5°C** | 31.0°C | ANOVA $F = 2,678$, $p < 10^{-300}$ (Significant) |
-| **Relative Humidity** | **71.8%** | 57.9% | 52.0% | ANOVA $F = 1,574$, $p < 10^{-300}$ (Significant) |
-| **Average Yield (t/ha)**| **5.63 t/ha** | 5.09 t/ha | 4.63 t/ha | Kruskal-Wallis $H = 70.59$, $p = 4.69 \times 10^{-16}$ |
-| **Water Efficiency** | **5.89 t/km³** | 5.19 t/km³ | 4.41 t/km³ | Kruskal-Wallis $H = 56.81$, $p = 4.61 \times 10^{-13}$ |
-| **Disease/Pest Risk** | **54.5%** | 40.5% | 38.2% | Kruskal-Wallis $H = 1,430$, $p < 10^{-300}$ |
-| **Gross Revenue** | **₹710,719** | ₹601,526 | ₹519,172 | ANOVA $F = 24.89$, $p = 1.81 \times 10^{-11}$ |
-| **Net Farm Profit** | **+₹178,915** | **+₹87,689** | **-₹24,805** | Kruskal-Wallis $H = 101.9$, $p = 7.36 \times 10^{-23}$ |
-| **Mean ROI (%)** | **35.5%** | 17.6% | **-2.5%** | Kruskal-Wallis $H = 98.06$, $p = 5.08 \times 10^{-22}$ |
+Open the local URL printed by Streamlit, normally `http://localhost:8501`. The cleaned CSV and all four model artifacts are included, so preprocessing and training are not required before the first launch. If saved models are incompatible with your installed scikit-learn version, regenerate them using the training command below.
 
-### 💡 Core Takeaways
-1. **The Summer (Zaid) Deficit:** Zaid crops suffer from net negative average profit (**-₹24,805**) and an average ROI of **-2.5%**. Over 54% of farms in summer lose money due to high evaporation, severe water pumping costs (6,420 m³), and reduced yields under traditional flood irrigation.
-2. **Micro-Irrigation Reversal:** Transitioning from Flood irrigation to **Drip irrigation** turns summer losses (-₹69,787) into positive earnings (+₹21,291) while boosting water efficiency from 3.8 to 6.2 t / 1000 m³.
-3. **Pest Surge in Monsoon:** High humidity and monsoon rains trigger pest vulnerability of 54.5% in Kharif, requiring proactive pest protection.
+## Dashboard Sections
 
----
+1. Executive Summary
+2. Seasonal Climate Dynamics
+3. Water & Irrigation Efficiency
+4. Farm Economics & Margins
+5. Regional Performance
+6. AI Yield & Profit Simulator
+7. 12 Key Analytical Questions
 
-## 🤖 Machine Learning Performance
+The simulator accepts farm, climate, nutrient, irrigation, price, and cost inputs. It predicts yield first, uses predicted production as an input to the profit model, and displays estimated financial outcomes. Its current implementation fixes soil moisture at 25% and disease/pest risk at 45%.
 
-| Prediction Task | Algorithm | Test $R^2$ | Test MAE | Test RMSE | 5-Fold CV $R^2$ |
-|---|---|---|---|---|---|
-| **Crop Yield (t/ha)** | **Gradient Boosting** | **0.9751** | **0.6412** | **2.1903** | **0.9736** |
-| Crop Yield (t/ha) | Random Forest | 0.9628 | 0.7539 | 2.6795 | 0.9616 |
-| Crop Yield (t/ha) | Ridge Regression | 0.8077 | 2.3138 | 6.0898 | 0.8109 |
-| **Net Profit (INR)** | **Gradient Boosting** | **0.9814** | **₹48,707** | **₹72,192** | **0.9787** |
-| Net Profit (INR) | Random Forest | 0.9733 | ₹56,817 | ₹86,604 | 0.9681 |
-| Net Profit (INR) | Ridge Regression | 0.6498 | ₹217,712| ₹313,448| 0.5985 |
+## Reproduce the Analysis
 
----
+Run these commands from the project root in order:
 
+```bash
+python src/data_preprocessing.py
+python src/statistical_analysis.py
+python src/ml_models.py
+python src/visualization.py
+```
 
-## 📜 Acknowledgments & Program Citation
-Developed under the **AICTE | IBM SkillsBuild Data Analytics with AI Internship Program 2026** (17th August to 30th September 2026), conducted in partnership with **BharatCares**, under the training and mentorship of **Mr. Kartik Hooda** (*Focus Topic: Data Analytics with AI: Foundation to Implementation*).
+Preprocessing imputes missing yield using production divided by farm area, missing rainfall using state/season medians, and missing soil moisture using crop/season medians, with seasonal fallback medians. It adds imputation flags, financial ratios, per-hectare measures, water productivity, total NPK, and profitability categories.
+
+Open the included notebook:
+
+```bash
+jupyter notebook notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb
+```
+
+To rebuild and execute it:
+
+```bash
+python src/build_jupyter_notebook.py
+```
+
+These commands overwrite their corresponding generated outputs. To generate Word reports after generating figures:
+
+```bash
+python src/generate_docx_report.py
+```
+
+The script currently writes `YourName_ProjectReport.docx` and `Ansh_ProjectReport.docx` in the project root; adjust those names in the script if needed.
+
+### Optional Presentation Generation
+
+The presentation script requires `data/Major_Project_PPT_Submission_Template.pptx`, which is **not included in the supplied ZIP**. Add that template before running:
+
+```bash
+python src/generate_presentation.py
+```
+
+The output is `reports/IBM_SkillsBuild_Seasonal_Agriculture_Performance_Analysis.pptx`. Neither this generated presentation nor the generated Word reports is included in the supplied archive.
+
+## Dataset Findings
+
+The following seasonal means were checked against the included cleaned dataset:
+
+| Metric | Kharif | Rabi | Zaid |
+|---|---:|---:|---:|
+| Rainfall (mm) | 852.11 | 435.93 | 299.34 |
+| Temperature (°C) | 28.45 | 23.49 | 31.04 |
+| Yield (t/ha) | 5.63 | 5.09 | 4.63 |
+| Net profit per farm (INR) | 178,914.65 | 87,689.47 | -24,804.82 |
+| ROI (%) | 35.45 | 17.60 | -2.47 |
+
+Kharif has the highest average yield and profit in this dataset. Zaid has a negative average profit despite higher temperatures. These comparisons describe the observed records and do not establish that season or irrigation method alone causes the differences.
+
+## Saved Machine Learning Results
+
+The training script uses an 80/20 random train/test split and five-fold shuffled cross-validation, both with random seed 42. Categorical features are one-hot encoded. Three algorithms are evaluated for yield and profit.
+
+Values below come from [ml_model_evaluation.csv](reports/ml_model_evaluation.csv); they are saved results, not a fresh training run.
+
+| Target | Model | Test R² | Test MAE | Test RMSE | Mean CV R² |
+|---|---|---:|---:|---:|---:|
+| Yield (t/ha) | Random Forest | 0.9628 | 0.7539 | 2.6795 | 0.9616 |
+| Yield (t/ha) | Gradient Boosting | 0.9751 | 0.6412 | 2.1903 | 0.9736 |
+| Yield (t/ha) | Ridge Regression | 0.8077 | 2.3138 | 6.0898 | 0.8109 |
+| Profit (INR) | Random Forest | 0.9733 | 56,816.55 | 86,604.48 | 0.9681 |
+| Profit (INR) | Gradient Boosting | 0.9814 | 48,706.73 | 72,192.39 | 0.9787 |
+| Profit (INR) | Ridge Regression | 0.6498 | 217,712.26 | 313,447.55 | 0.5985 |
+
+Gradient Boosting has the highest recorded test R² for both targets. Yield uses 19 input fields before encoding; profit additionally uses market price, production, and total cost.
+
+## Interpretation and Limitations
+
+- R² is a regression fit measure, not a percentage prediction accuracy.
+- Validation uses random splits, not unseen seasons, future years, or held-out regions.
+- Profit evaluation uses recorded production, while the dashboard uses predicted production. Saved profit scores do not measure error across the complete two-stage simulator.
+- Production, price, and cost are closely tied to the profit target; high fit should not be treated as proof of reliable pre-season forecasting.
+- Missing-value imputation is performed before model splitting, so validation does not isolate preprocessing within each training fold.
+- Dashboard answers include prewritten summaries; use the included data and result tables to verify numerical claims.
+- The application uses local data and models. Internet access is needed for package installation and the externally hosted sidebar image.
+- No license file is included in the archive; no open-source license is asserted here.
+
+## Acknowledgments
+
+Prepared under the AICTE | IBM SkillsBuild Data Analytics with AI Internship Program 2026, in partnership with BharatCares, with training and mentorship from Mr. Kartik Hooda.
