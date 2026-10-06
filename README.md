@@ -53,7 +53,6 @@ The ZIP includes a [project brief](data/Seasonal%20Agriculture%20Performance%20A
 | Notebook generation and execution | Jupyter, nbformat, nbclient, ipykernel |
 | Document generation | python-docx, python-pptx |
 
-See [requirements.txt](requirements.txt) for the declared dependency versions. Python 3.10 or newer is a practical starting point. Model training uses `root_mean_squared_error`, which requires **scikit-learn 1.4 or newer**, although the existing requirements file declares `>=1.3.0`.
 
 ## Project Files
 
@@ -104,17 +103,6 @@ If PowerShell prevents activation, use the virtual environment directly:
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-### Linux / macOS
-
-```bash
-cd seasonal_agriculture_performance_analysis
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install "scikit-learn>=1.4"
-python -m streamlit run app.py
-```
 
 Open the local URL printed by Streamlit, normally `http://localhost:8501`. The cleaned CSV and all four model artifacts are included, so preprocessing and training are not required before the first launch. If saved models are incompatible with your installed scikit-learn version, regenerate them using the training command below.
 
