@@ -22,7 +22,7 @@ The Streamlit dashboard provides interactive filters and a yield/profit simulato
 - Review answers to 12 agricultural analysis questions.
 - Run statistical tests and compare three regression algorithms.
 - Regenerate analysis tables, figures, models, and the Jupyter notebook.
-- Generate a Word report; generate a presentation when its required template is available.
+
 
 ## Dataset
 
