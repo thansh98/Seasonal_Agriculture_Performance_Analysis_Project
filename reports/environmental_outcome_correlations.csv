@@ -1,0 +1,7 @@
+,Yield_Tonnes_Ha,Water_Efficiency_t_per_1000m3,Profit_INR,Disease_Pest_Risk_pct,ROI_pct
+Rainfall_mm,0.027,0.057,0.106,0.624,0.119
+Avg_Temperature_C,0.009,0.007,0.009,0.246,0.007
+Humidity_pct,0.011,0.026,0.064,0.545,0.079
+Sunlight_Hours_Day,-0.016,-0.021,-0.055,-0.253,-0.059
+Soil_pH,-0.022,-0.01,-0.013,0.031,-0.013
+Soil_Moisture_pct,0.01,0.028,0.092,0.379,0.107

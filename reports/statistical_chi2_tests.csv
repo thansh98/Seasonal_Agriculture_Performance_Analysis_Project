@@ -1,0 +1,5 @@
+Relationship,Chi2_Stat,p_value,Degrees_of_Freedom,Significant
+Irrigation_Method vs Season,3.51,0.7423,6,No
+Profitability_Category vs Season,100.06,9.54e-21,4,Yes
+Crop vs Season,13.93,0.455,14,No
+State vs Profitability_Category,18.11,0.2018,14,No

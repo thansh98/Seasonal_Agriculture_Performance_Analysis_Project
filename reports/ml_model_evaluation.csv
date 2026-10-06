@@ -1,0 +1,7 @@
+Target,Model,Test_R2,Test_MAE,Test_RMSE,CV_R2_Mean,CV_R2_Std
+Yield_Tonnes_Ha,Random Forest,0.9628,0.7539,2.6795,0.9616,0.0049
+Yield_Tonnes_Ha,Gradient Boosting,0.9751,0.6412,2.1903,0.9736,0.0012
+Yield_Tonnes_Ha,Ridge Regression,0.8077,2.3138,6.0898,0.8109,0.0159
+Profit_INR,Random Forest,0.9733,56816.55,86604.48,0.9681,0.005
+Profit_INR,Gradient Boosting,0.9814,48706.73,72192.39,0.9787,0.0025
+Profit_INR,Ridge Regression,0.6498,217712.26,313447.55,0.5985,0.0539

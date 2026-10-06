@@ -1,0 +1,16 @@
+Metric,Comparison,Mean_Diff,U_Statistic,p_value,Significant (Bonferroni alpha=0.017)
+Yield_Tonnes_Ha,Kharif vs Rabi,0.54,1593425.5,3.39e-07,Yes
+Yield_Tonnes_Ha,Kharif vs Zaid,1.0,643655.0,1.53e-15,Yes
+Yield_Tonnes_Ha,Rabi vs Zaid,0.46,541962.0,1.12e-05,Yes
+Profit_INR,Kharif vs Rabi,91225.18,1594632.5,2.71e-07,Yes
+Profit_INR,Kharif vs Zaid,203719.47,668508.0,3.24e-22,Yes
+Profit_INR,Rabi vs Zaid,112494.3,570725.0,6.10e-11,Yes
+Water_Efficiency_t_per_1000m3,Kharif vs Rabi,0.71,1559766.0,8.63e-05,Yes
+Water_Efficiency_t_per_1000m3,Kharif vs Zaid,1.48,634140.5,2.56e-13,Yes
+Water_Efficiency_t_per_1000m3,Rabi vs Zaid,0.77,545246.0,3.54e-06,Yes
+Rainfall_mm,Kharif vs Rabi,416.18,2744671.0,0.00e+00,Yes
+Rainfall_mm,Kharif vs Zaid,552.77,1044747.5,2.34e-279,Yes
+Rainfall_mm,Rabi vs Zaid,136.59,695517.5,1.01e-56,Yes
+Disease_Pest_Risk_pct,Kharif vs Rabi,13.99,2416902.5,8.08e-251,Yes
+Disease_Pest_Risk_pct,Kharif vs Zaid,16.25,924376.5,3.68e-165,Yes
+Disease_Pest_Risk_pct,Rabi vs Zaid,2.27,546103.0,2.59e-06,Yes
