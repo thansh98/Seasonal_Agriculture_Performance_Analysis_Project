@@ -51,7 +51,6 @@ The ZIP includes a [project brief](data/Seasonal%20Agriculture%20Performance%20A
 | Visualization | Matplotlib, Seaborn, Plotly, statsmodels |
 | Web dashboard | Streamlit |
 | Notebook generation and execution | Jupyter, nbformat, nbclient, ipykernel |
-| Document generation | python-docx, python-pptx |
 
 
 ## Project Files
@@ -134,32 +133,8 @@ Preprocessing imputes missing yield using production divided by farm area, missi
 Open the included notebook:
 
 ```bash
-jupyter notebook notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb
+jupyter notebook notebooks/Ansh_Seasonal_Agriculture_Performance_Analysis.ipynb
 ```
-
-To rebuild and execute it:
-
-```bash
-python src/build_jupyter_notebook.py
-```
-
-These commands overwrite their corresponding generated outputs. To generate Word reports after generating figures:
-
-```bash
-python src/generate_docx_report.py
-```
-
-The script currently writes `YourName_ProjectReport.docx` and `Ansh_ProjectReport.docx` in the project root; adjust those names in the script if needed.
-
-### Optional Presentation Generation
-
-The presentation script requires `data/Major_Project_PPT_Submission_Template.pptx`, which is **not included in the supplied ZIP**. Add that template before running:
-
-```bash
-python src/generate_presentation.py
-```
-
-The output is `reports/IBM_SkillsBuild_Seasonal_Agriculture_Performance_Analysis.pptx`. Neither this generated presentation nor the generated Word reports is included in the supplied archive.
 
 ## Dataset Findings
 
