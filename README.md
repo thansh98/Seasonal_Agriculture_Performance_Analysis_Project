@@ -41,47 +41,45 @@ git add .
 ```
 seasonal_agriculture_performance_analysis/
 │
-├── data/                                      # Datasets and submission templates
-│   ├── seasonal_agriculture_performance_dataset.csv     # Raw dataset (4,000 farms)
-│   ├── cleaned_seasonal_agriculture_dataset.csv          # Cleaned & feature-engineered dataset
-│   ├── Major_Project_Requirements.pdf                    # Official project prompt
-│   └── Major_Project_PPT_Submission_Template.pptx        # Official presentation template
+├── data/                                     
+│   ├── seasonal_agriculture_performance_dataset.csv     
+│   ├── cleaned_seasonal_agriculture_dataset.csv        
+│   ├── Major_Project_Requirements.pdf                   
+│     
 │
-├── notebooks/                                 # Jupyter Notebooks
-│   └── Seasonal_Agriculture_Performance_Analysis.ipynb # Complete executed analysis notebook (1.7 MB)
+├── notebooks/                               
+│   └── Seasonal_Agriculture_Performance_Analysis.ipynb 
 │
-├── reports/                                   # Project outputs, figures, and models
-│   ├── figures/                               # 10 High-resolution 300 DPI figures
-│   │   ├── seasonal_distributions.png         # Rainfall, Temperature, Humidity, Sunlight distributions
-│   │   ├── yield_by_crop_season.png           # Mean crop yield across seasons
-│   │   ├── irrigation_efficiency.png          # Drip vs Flood vs Sprinkler vs Rainfed analysis
-│   │   ├── economic_performance.png           # Revenue, Cost, and Profit distributions
-│   │   ├── crop_profitability_matrix.png      # Crop vs Season net profit heatmap
-│   │   ├── disease_pest_risk.png              # Humidity/Rainfall vs Pest Risk regressions
-│   │   ├── correlation_heatmap.png            # Feature correlation matrix
-│   │   ├── state_seasonal_disparity.png       # State-wise profit across seasons
-│   │   ├── feature_importance.png             # ML predictive drivers for yield and profit
-│   │   └── key_questions_summary.png          # Executive infographic
-│   ├── models/                                # Trained ML model artifacts
-│   │   ├── best_yield_model.pkl               # Gradient Boosting Yield Predictor (R2 = 0.975)
-│   │   └── best_profit_model.pkl              # Gradient Boosting Profit Predictor (R2 = 0.981)
-│   ├── IBM_SkillsBuild_Seasonal_Agriculture_Performance_Analysis.pptx # Completed presentation deck
-│   ├── statistical_anova_tests.csv            # Parametric & non-parametric ANOVA results
-│   ├── statistical_pairwise_tests.csv         # Mann-Whitney U tests with Bonferroni correction
-│   └── ml_model_evaluation.csv                # Model comparison benchmark table
+├── reports/                                
+│   ├── figures/                               
+│   │   ├── seasonal_distributions.png        
+│   │   ├── yield_by_crop_season.png          
+│   │   ├── irrigation_efficiency.png          
+│   │   ├── economic_performance.png           
+│   │   ├── crop_profitability_matrix.png      
+│   │   ├── disease_pest_risk.png             
+│   │   ├── correlation_heatmap.png            
+│   │   ├── state_seasonal_disparity.png       
+│   │   ├── feature_importance.png          
+│   │   └── key_questions_summary.png         
+│   ├── models/                                
+│   │   ├── best_yield_model.pkl               
+│   │   └── best_profit_model.pkl           
+│   ├── statistical_anova_tests.csv           
+│   ├── statistical_pairwise_tests.csv     
+│   └── ml_model_evaluation.csv               
 │
-├── src/                                       # Modular Python source code
-│   ├── data_preprocessing.py                  # Cleaning & feature engineering pipeline
-│   ├── statistical_analysis.py                # Hypothesis testing & correlation analysis
-│   ├── ml_models.py                           # Supervised ML training and cross-validation
-│   ├── visualization.py                       # High-res figure generation
-│   ├── generate_presentation.py               # PowerPoint automation script
-│   └── build_jupyter_notebook.py              # Notebook generation & inline execution
+├── src/                                
+│   ├── data_preprocessing.py               
+│   ├── statistical_analysis.py           
+│   ├── ml_models.py                           
+│   ├── visualization.py                      
+│   ├── generate_presentation.py              
+│   └── build_jupyter_notebook.py            
 │
-├── app.py                                     # Interactive Streamlit Web Dashboard
-├── PROJECT_REPORT.md                          # Comprehensive formal academic report
-├── requirements.txt                           # Python dependencies
-└── README.md                                  # Project overview and quickstart guide
+├── app.py                                                        
+├── requirements.txt                           
+└── README.md                                  
 ```
 
 ---
