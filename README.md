@@ -60,7 +60,7 @@ The analysis uses the seasonal agriculture dataset supplied with the project.
 | `app.py` | Streamlit dashboard and prediction simulator |
 | `requirements.txt` | Python dependencies |
 | `data/` | Raw/cleaned CSVs and project brief |
-| `notebooks/Seasonal_Agriculture_Performance_Analysis.ipynb` | Analysis notebook |
+| `notebooks/Ansh_Seasonal_Agriculture_Performance_Analysis.ipynb` | Analysis notebook |
 | `src/data_preprocessing.py` | Missing-value handling and derived features |
 | `src/statistical_analysis.py` | Hypothesis tests and correlations |
 | `src/ml_models.py` | Model training, evaluation, and saving |
